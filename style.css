@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #000000;
+}
+
+.full-screen-3d-example {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.full-screen-3d-example.-loaded {
+    opacity: 1;
+}
+
+.full-screen-3d-example a {
+   color: #FF6EC7; /* white color for the link text */
+    transition: color 0.5s ease; /* transition effect for the color change */
+    text-decoration: none; /* remove the default underline */
+}
+
+.full-screen-3d-example a:hover {
+    color: #ff4081; /* pink color when the link is hovered over */
+}
+
+.full-screen-3d-example a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff4081; /* pink color for the underline */
+    transition: width .3s; /* transition effect for the underline */
+}
+
+.full-screen-3d-example a:hover::after {
+    
+    width: 100%; /* full width underline when the link is hovered over */
+}
